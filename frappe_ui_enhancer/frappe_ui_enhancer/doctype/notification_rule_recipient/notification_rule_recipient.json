@@ -1,0 +1,33 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "istable": 1,
+ "module": "Frappe UI Enhancer",
+ "name": "Notification Rule Recipient",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "links": [],
+ "field_order": [
+  "user"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_grid_view": 1,
+   "columns": 4
+  }
+ ],
+ "permissions": []
+}

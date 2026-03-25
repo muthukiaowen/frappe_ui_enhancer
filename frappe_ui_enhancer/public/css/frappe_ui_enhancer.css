@@ -1,0 +1,278 @@
+/**
+ * Frappe UI Enhancer v0.1.0
+ * Author: muthukiaowen@cyvetech.com | Cyvetech
+ *
+ * ALL styles read CSS variables set by frappe_ui_enhancer.js.
+ * Nothing is hardcoded — if the variable is not set, the browser
+ * falls back to Frappe's own default, so ERPNext is never broken.
+ *
+ * Variable reference (all set by JS from UI Settings + User Prefs):
+ *   --ui-primary       --ui-secondary     --ui-accent        --ui-text
+ *   --ui-link          --ui-success       --ui-warning       --ui-danger
+ *   --ui-font          --ui-font-size     --ui-font-weight   --ui-font-bold
+ *   --ui-radius        --ui-navbar-bg     --ui-navbar-text   --ui-navbar-h
+ *   --ui-sidebar-bg    --ui-sidebar-text  --ui-sidebar-act-bg --ui-sidebar-act-txt
+ *   --ui-page-bg       --ui-card-bg       --ui-card-border
+ *   --ui-btn-bg        --ui-btn-text      --ui-btn-hover
+ *   --ui-btn2-bg       --ui-btn2-text
+ *   --ui-input-bg      --ui-input-border  --ui-input-text    --ui-input-focus
+ *   --ui-label         --ui-th-bg         --ui-th-text
+ *   --ui-tr-bg         --ui-tr-alt        --ui-tr-text       --ui-table-border
+ *   --ui-footer-bg     --ui-footer-text
+ *   --ui-login-box-bg  --ui-login-btn-bg  --ui-login-btn-text --ui-login-radius
+ */
+
+/* ─── Global Typography ──────────────────────────────────────────────────── */
+body,
+.frappe-app,
+.desk-sidebar,
+.navbar {
+    font-family: var(--ui-font, inherit);
+    font-size:   var(--ui-font-size, inherit);
+    color:       var(--ui-text, inherit);
+}
+
+/* ─── Global Border Radius ───────────────────────────────────────────────── */
+.btn,
+.form-control,
+.input-with-feedback,
+.widget,
+.card,
+.layout-main-section,
+.page-card,
+.modal-content,
+.popover,
+.dropdown-menu {
+    border-radius: var(--ui-radius, inherit) !important;
+}
+
+/* ─── Navbar ─────────────────────────────────────────────────────────────── */
+.navbar,
+.navbar-header {
+    background-color: var(--ui-navbar-bg, inherit) !important;
+    min-height:       var(--ui-navbar-h, inherit);
+}
+
+/* Navbar text, icons, breadcrumbs */
+.navbar .navbar-brand,
+.navbar .navbar-brand span,
+.navbar .nav-link,
+.navbar .nav-link span,
+#navbar-breadcrumbs li a,
+.btn-reset.nav-link span,
+.navbar .help-link {
+    color: var(--ui-navbar-text, inherit) !important;
+}
+
+/* Navbar SVG icons */
+.navbar svg,
+.navbar svg path,
+.navbar svg use,
+.btn-reset.nav-link span svg,
+.btn-reset.nav-link span svg use {
+    stroke: var(--ui-navbar-text, currentColor) !important;
+    fill:   var(--ui-navbar-text, currentColor) !important;
+}
+
+/* Navbar search box */
+.navbar .search-bar .form-control,
+.navbar .input-group .form-control {
+    background-color: rgba(255,255,255,0.12);
+    color:            var(--ui-navbar-text, inherit);
+    border-color:     rgba(255,255,255,0.2);
+}
+
+/* ─── Sidebar ────────────────────────────────────────────────────────────── */
+.body-sidebar,
+.desk-sidebar,
+.sidebar-section {
+    background-color: var(--ui-sidebar-bg, inherit) !important;
+}
+
+.standard-sidebar-item,
+.item-anchor,
+.sidebar-item-label,
+.sidebar-item-icon,
+.sidebar-section-head {
+    color: var(--ui-sidebar-text, inherit) !important;
+}
+
+.sidebar-item-icon svg,
+.sidebar-item-icon svg use {
+    stroke: var(--ui-sidebar-text, currentColor) !important;
+    fill:   var(--ui-sidebar-bg,   currentColor) !important;
+}
+
+/* Active sidebar item */
+.standard-sidebar-item.selected,
+.standard-sidebar-item.active,
+.standard-sidebar-item:focus-within {
+    background-color: var(--ui-sidebar-act-bg, inherit) !important;
+}
+.standard-sidebar-item.selected .sidebar-item-label,
+.standard-sidebar-item.active  .sidebar-item-label {
+    color: var(--ui-sidebar-act-txt, inherit) !important;
+}
+
+/* ─── Page & Body ────────────────────────────────────────────────────────── */
+body,
+.page-body,
+.content.page-container,
+.page-head,
+.layout-main {
+    background-color: var(--ui-page-bg, inherit);
+}
+
+/* ─── Cards / Content Boxes ──────────────────────────────────────────────── */
+.layout-main-section,
+.form-layout,
+.form-page,
+.widget,
+.widget.dashboard-widget-box,
+.widget.number-widget-box,
+.card-body,
+.frappe-card {
+    background-color: var(--ui-card-bg,     inherit) !important;
+    border-color:     var(--ui-card-border, inherit) !important;
+}
+
+/* ─── Primary Buttons ────────────────────────────────────────────────────── */
+.btn-primary,
+.btn-primary:active,
+.btn-primary.disabled {
+    background-color: var(--ui-btn-bg,   inherit) !important;
+    border-color:     var(--ui-btn-bg,   inherit) !important;
+    color:            var(--ui-btn-text, inherit) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--ui-btn-hover, inherit) !important;
+    border-color:     var(--ui-btn-hover, inherit) !important;
+}
+.btn-primary span {
+    color: var(--ui-btn-text, inherit) !important;
+}
+
+/* ─── Secondary / Default Buttons ───────────────────────────────────────── */
+.btn-default,
+.btn-default:active,
+.btn.btn-default {
+    background-color: var(--ui-btn2-bg,   inherit) !important;
+    color:            var(--ui-btn2-text, inherit) !important;
+}
+
+/* ─── Form Inputs ────────────────────────────────────────────────────────── */
+.form-control,
+.input-with-feedback,
+.frappe-control input,
+.frappe-control select,
+.frappe-control textarea {
+    background-color: var(--ui-input-bg,     inherit) !important;
+    border-color:     var(--ui-input-border, inherit) !important;
+    color:            var(--ui-input-text,   inherit) !important;
+}
+.form-control:focus,
+.frappe-control input:focus {
+    border-color: var(--ui-input-focus, inherit) !important;
+    box-shadow:   0 0 0 2px color-mix(in srgb, var(--ui-input-focus, transparent) 20%, transparent);
+}
+
+/* Field labels */
+.control-label,
+label.control-label,
+.frappe-control .control-label {
+    color: var(--ui-label, inherit) !important;
+}
+
+/* ─── List / Data Tables ─────────────────────────────────────────────────── */
+/* Header row */
+.level.list-row-head,
+.list-row-head {
+    background-color: var(--ui-th-bg,   inherit) !important;
+    color:            var(--ui-th-text, inherit) !important;
+}
+.level-left.list-header-subject span,
+.list-row-head .level-item {
+    color: var(--ui-th-text, inherit) !important;
+}
+
+/* Data rows */
+.list-row,
+.level.list-row {
+    background-color: var(--ui-tr-bg,   inherit) !important;
+    color:            var(--ui-tr-text, inherit) !important;
+    border-color:     var(--ui-table-border, inherit) !important;
+}
+.list-row:nth-child(even) {
+    background-color: var(--ui-tr-alt, inherit) !important;
+}
+.level-item.bold.ellipsis a,
+.filterable.ellipsis {
+    color: var(--ui-tr-text, inherit) !important;
+}
+
+/* ─── Links ──────────────────────────────────────────────────────────────── */
+a,
+.btn-link {
+    color: var(--ui-link, inherit);
+}
+a:hover,
+.btn-link:hover {
+    color: var(--ui-accent, inherit);
+}
+
+/* ─── Login Page ─────────────────────────────────────────────────────────── */
+#page-login {
+    min-height: 100vh;
+    background-size:     cover;
+    background-position: center;
+    background-repeat:   no-repeat;
+}
+
+/* Login card / box */
+.login-content.page-card,
+.signup-content.page-card,
+.forgot-content.page-card {
+    background-color: var(--ui-login-box-bg, #fff) !important;
+    border-radius:    var(--ui-login-radius, 8px)  !important;
+}
+
+/* Login submit button */
+.btn-primary.btn-login,
+.btn-primary.btn-forgot {
+    background-color: var(--ui-login-btn-bg, inherit) !important;
+    color:            var(--ui-login-btn-text, inherit) !important;
+    border-color:     var(--ui-login-btn-bg, inherit) !important;
+}
+.btn-primary.btn-login:hover {
+    background-color: var(--ui-btn-hover, inherit) !important;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────────── */
+#enh-footer {
+    background-color: var(--ui-footer-bg,   #f5f5f5);
+    color:            var(--ui-footer-text,  #666);
+    padding:          12px 20px;
+    font-size:        12px;
+    border-top:       1px solid var(--ui-card-border, #e0e0e0);
+    text-align:       center;
+    flex-shrink:      0;
+}
+
+/* ─── Gradient Builder Targets in UI Settings form ───────────────────────── */
+#login-gradient-builder-target,
+#workspace-gradient-builder-target {
+    margin-top: 6px;
+}
+
+/* ─── User Preferences Panel (opened via notification bell footer) ────────── */
+.enh-pref-badge {
+    display:          inline-block;
+    font-size:        10px;
+    font-weight:      700;
+    padding:          2px 7px;
+    border-radius:    10px;
+    background:       var(--ui-accent,  #2490EF);
+    color:            #fff;
+    vertical-align:   middle;
+}

@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "issingle": 0,
+ "module": "Frappe UI Enhancer",
+ "name": "User UI Preferences",
+ "naming_rule": "By fieldname",
+ "autoname": "field:user",
+ "title_field": "user",
+ "sort_field": "user",
+ "sort_order": "ASC",
+ "track_changes": 0,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "field_order": [
+  "user",
+  "appearance_section",
+  "accent_color",
+  "dark_mode",
+  "col_a",
+  "font_size",
+  "workspace_section",
+  "workspace_bg_type",
+  "workspace_bg_color",
+  "col_w",
+  "workspace_bg_image",
+  "notifications_section",
+  "notification_sound",
+  "toast_duration",
+  "col_n",
+  "mute_from",
+  "mute_to",
+  "css_section",
+  "custom_css"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "appearance_section",
+   "fieldtype": "Section Break",
+   "label": "Appearance"
+  },
+  {
+   "fieldname": "accent_color",
+   "fieldtype": "Color",
+   "label": "Accent Color Override",
+   "description": "Overrides the system accent color for your session only."
+  },
+  {
+   "fieldname": "dark_mode",
+   "fieldtype": "Check",
+   "label": "Dark Mode"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "font_size",
+   "fieldtype": "Select",
+   "label": "Font Size",
+   "options": "\n12px\n13px\n14px\n15px\n16px"
+  },
+  {
+   "fieldname": "workspace_section",
+   "fieldtype": "Section Break",
+   "label": "Workspace Background"
+  },
+  {
+   "fieldname": "workspace_bg_type",
+   "fieldtype": "Select",
+   "label": "Background Type",
+   "options": "None\nSolid Color\nImage"
+  },
+  {
+   "fieldname": "workspace_bg_color",
+   "fieldtype": "Color",
+   "label": "Solid Color",
+   "depends_on": "eval:doc.workspace_bg_type=='Solid Color'"
+  },
+  {
+   "fieldname": "col_w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workspace_bg_image",
+   "fieldtype": "Attach Image",
+   "label": "Background Image",
+   "depends_on": "eval:doc.workspace_bg_type=='Image'"
+  },
+  {
+   "fieldname": "notifications_section",
+   "fieldtype": "Section Break",
+   "label": "Notification Preferences"
+  },
+  {
+   "fieldname": "notification_sound",
+   "fieldtype": "Select",
+   "label": "Sound",
+   "options": "\nSoft\nChime\nAlert\nOff"
+  },
+  {
+   "fieldname": "toast_duration",
+   "fieldtype": "Int",
+   "label": "Toast Duration Override (ms)",
+   "description": "0 = use system default"
+  },
+  {
+   "fieldname": "col_n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mute_from",
+   "fieldtype": "Time",
+   "label": "Mute From",
+   "description": "Suppress notifications between these hours."
+  },
+  {
+   "fieldname": "mute_to",
+   "fieldtype": "Time",
+   "label": "Mute To"
+  },
+  {
+   "fieldname": "css_section",
+   "fieldtype": "Section Break",
+   "label": "Custom CSS",
+   "depends_on": "eval:frappe.user_roles && frappe.user_roles.indexOf('System Manager')>-1 || 1"
+  },
+  {
+   "fieldname": "custom_css",
+   "fieldtype": "Code",
+   "label": "Personal CSS",
+   "options": "CSS",
+   "description": "Applied only to your session. Only available if enabled by System Manager."
+  }
+ ],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "if_owner": 1,
+   "read": 1,
+   "write": 1,
+   "role": "All"
+  }
+ ]
+}

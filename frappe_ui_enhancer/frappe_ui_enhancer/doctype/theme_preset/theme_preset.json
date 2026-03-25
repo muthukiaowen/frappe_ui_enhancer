@@ -1,0 +1,267 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "issingle": 0,
+ "module": "Frappe UI Enhancer",
+ "name": "Theme Preset",
+ "naming_rule": "By fieldname",
+ "autoname": "field:preset_name",
+ "title_field": "preset_name",
+ "sort_field": "preset_name",
+ "sort_order": "ASC",
+ "track_changes": 0,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "field_order": [
+  "preset_name",
+  "is_active",
+  "description",
+  "thumbnail",
+  "colors_section",
+  "primary_color",
+  "secondary_color",
+  "col1",
+  "accent_color",
+  "text_color",
+  "nav_section",
+  "navbar_bg",
+  "navbar_text",
+  "col2",
+  "sidebar_bg",
+  "sidebar_text",
+  "col3",
+  "sidebar_active_bg",
+  "sidebar_active_text",
+  "btn_section",
+  "btn_primary_bg",
+  "btn_primary_text",
+  "col4",
+  "btn_primary_hover",
+  "type_section",
+  "font_family",
+  "font_size_base",
+  "col5",
+  "border_radius",
+  "login_section",
+  "login_bg_type",
+  "login_bg_color",
+  "login_bg_gradient",
+  "col6",
+  "login_box_bg",
+  "login_btn_bg",
+  "login_btn_text"
+ ],
+ "fields": [
+  {
+   "fieldname": "preset_name",
+   "fieldtype": "Data",
+   "label": "Preset Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "thumbnail",
+   "fieldtype": "Attach Image",
+   "label": "Preview Image"
+  },
+  {
+   "fieldname": "colors_section",
+   "fieldtype": "Section Break",
+   "label": "Theme Colors"
+  },
+  {
+   "fieldname": "primary_color",
+   "fieldtype": "Color",
+   "label": "Primary"
+  },
+  {
+   "fieldname": "secondary_color",
+   "fieldtype": "Color",
+   "label": "Secondary"
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accent_color",
+   "fieldtype": "Color",
+   "label": "Accent"
+  },
+  {
+   "fieldname": "text_color",
+   "fieldtype": "Color",
+   "label": "Text"
+  },
+  {
+   "fieldname": "nav_section",
+   "fieldtype": "Section Break",
+   "label": "Navigation"
+  },
+  {
+   "fieldname": "navbar_bg",
+   "fieldtype": "Color",
+   "label": "Navbar Background"
+  },
+  {
+   "fieldname": "navbar_text",
+   "fieldtype": "Color",
+   "label": "Navbar Text"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sidebar_bg",
+   "fieldtype": "Color",
+   "label": "Sidebar Background"
+  },
+  {
+   "fieldname": "sidebar_text",
+   "fieldtype": "Color",
+   "label": "Sidebar Text"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sidebar_active_bg",
+   "fieldtype": "Color",
+   "label": "Sidebar Active BG"
+  },
+  {
+   "fieldname": "sidebar_active_text",
+   "fieldtype": "Color",
+   "label": "Sidebar Active Text"
+  },
+  {
+   "fieldname": "btn_section",
+   "fieldtype": "Section Break",
+   "label": "Buttons"
+  },
+  {
+   "fieldname": "btn_primary_bg",
+   "fieldtype": "Color",
+   "label": "Primary Button BG"
+  },
+  {
+   "fieldname": "btn_primary_text",
+   "fieldtype": "Color",
+   "label": "Primary Button Text"
+  },
+  {
+   "fieldname": "col4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "btn_primary_hover",
+   "fieldtype": "Color",
+   "label": "Primary Button Hover"
+  },
+  {
+   "fieldname": "type_section",
+   "fieldtype": "Section Break",
+   "label": "Typography"
+  },
+  {
+   "fieldname": "font_family",
+   "fieldtype": "Data",
+   "label": "Font Family"
+  },
+  {
+   "fieldname": "font_size_base",
+   "fieldtype": "Select",
+   "label": "Font Size",
+   "options": "12px\n13px\n14px\n15px\n16px",
+   "default": "14px"
+  },
+  {
+   "fieldname": "col5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "border_radius",
+   "fieldtype": "Select",
+   "label": "Border Radius",
+   "options": "0px\n2px\n4px\n6px\n8px\n12px\n16px\n20px",
+   "default": "6px"
+  },
+  {
+   "fieldname": "login_section",
+   "fieldtype": "Section Break",
+   "label": "Login Page"
+  },
+  {
+   "fieldname": "login_bg_type",
+   "fieldtype": "Select",
+   "label": "Login BG Type",
+   "options": "None\nSolid Color\nGradient",
+   "default": "None"
+  },
+  {
+   "fieldname": "login_bg_color",
+   "fieldtype": "Color",
+   "label": "Login BG Color"
+  },
+  {
+   "fieldname": "login_bg_gradient",
+   "fieldtype": "Data",
+   "label": "Login BG Gradient"
+  },
+  {
+   "fieldname": "col6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "login_box_bg",
+   "fieldtype": "Color",
+   "label": "Login Box BG"
+  },
+  {
+   "fieldname": "login_btn_bg",
+   "fieldtype": "Color",
+   "label": "Login Button BG"
+  },
+  {
+   "fieldname": "login_btn_text",
+   "fieldtype": "Color",
+   "label": "Login Button Text"
+  }
+ ],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "export": 1,
+   "role": "System Manager"
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ]
+}

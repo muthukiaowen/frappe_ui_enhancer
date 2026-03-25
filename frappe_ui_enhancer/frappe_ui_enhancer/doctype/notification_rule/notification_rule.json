@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "issingle": 0,
+ "module": "Frappe UI Enhancer",
+ "name": "Notification Rule",
+ "naming_rule": "Expression",
+ "autoname": "format:NRULE-{#####}",
+ "title_field": "rule_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "field_order": [
+  "rule_name",
+  "is_active",
+  "priority",
+  "trigger_section",
+  "document_type",
+  "event",
+  "condition_section",
+  "condition",
+  "message_section",
+  "title",
+  "message_template",
+  "recipients_section",
+  "recipients",
+  "help_section",
+  "help_text"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "label": "Rule Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Info\nWarning\nCritical",
+   "default": "Info",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "trigger_section",
+   "fieldtype": "Section Break",
+   "label": "Trigger"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "e.g. Purchase Order, Leave Application, Sales Invoice"
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Select",
+   "label": "Event",
+   "options": "After Insert\nOn Save\nOn Submit\nOn Cancel\nOn Delete\nDaily\nWeekly",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "condition_section",
+   "fieldtype": "Section Break",
+   "label": "Condition (Optional)"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Code",
+   "label": "Condition",
+   "options": "Python",
+   "description": "Python expression. Use 'doc' to access fields.\nExamples:\ndoc.grand_total > 100000\ndoc.status == 'Overdue'\ndoc.docstatus == 1"
+  },
+  {
+   "fieldname": "message_section",
+   "fieldtype": "Section Break",
+   "label": "Message"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Notification Title",
+   "reqd": 1,
+   "description": "Supports Jinja2: {{ doc.name }}, {{ doc.customer }}"
+  },
+  {
+   "fieldname": "message_template",
+   "fieldtype": "Text Editor",
+   "label": "Message",
+   "description": "Supports Jinja2. Example: PO {{ doc.name }} for {{ doc.supplier }} submitted."
+  },
+  {
+   "fieldname": "recipients_section",
+   "fieldtype": "Section Break",
+   "label": "Recipients"
+  },
+  {
+   "fieldname": "recipients",
+   "fieldtype": "Table",
+   "label": "Recipients",
+   "options": "Notification Rule Recipient",
+   "description": "Users who will receive this notification."
+  },
+  {
+   "fieldname": "help_section",
+   "fieldtype": "Section Break",
+   "label": "Help"
+  },
+  {
+   "fieldname": "help_text",
+   "fieldtype": "HTML",
+   "label": "Quick Reference",
+   "options": "<div style='background:#f8f9fa;padding:12px;border-radius:6px;font-size:12px'><b>Condition Examples:</b><br><code>doc.grand_total &gt; 100000</code><br><code>doc.status == \"Overdue\"</code><br><code>doc.docstatus == 1</code><br><br><b>Message Template:</b><br><code>PO {{ doc.name }} submitted by {{ doc.owner }}</code></div>"
+  }
+ ],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "export": 1,
+   "report": 1,
+   "role": "System Manager"
+  }
+ ]
+}

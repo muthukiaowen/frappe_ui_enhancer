@@ -1,0 +1,1 @@
+recursive-include frappe_ui_enhancer *.json *.js *.css *.html *.txt *.md

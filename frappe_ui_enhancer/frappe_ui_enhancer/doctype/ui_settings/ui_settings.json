@@ -1,0 +1,822 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "issingle": 1,
+ "module": "Frappe UI Enhancer",
+ "name": "UI Settings",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "links": [],
+ "field_order": [
+  "enable_custom_theme",
+  "allow_user_customisation",
+  "allow_user_custom_css",
+  "theme_tab",
+  "brand_section",
+  "company_logo",
+  "logo_width",
+  "col_logo",
+  "company_tagline",
+  "colors_section",
+  "primary_color",
+  "secondary_color",
+  "col_c1",
+  "accent_color",
+  "text_color",
+  "col_c2",
+  "link_color",
+  "success_color",
+  "col_c3",
+  "warning_color",
+  "danger_color",
+  "typography_section",
+  "font_family",
+  "font_size_base",
+  "col_t1",
+  "font_weight_normal",
+  "font_weight_bold",
+  "col_t2",
+  "border_radius",
+  "login_tab",
+  "login_bg_section",
+  "login_bg_type",
+  "login_bg_color",
+  "login_bg_gradient",
+  "login_bg_image",
+  "col_lb",
+  "login_bg_blur",
+  "login_bg_overlay",
+  "login_gradient_builder",
+  "login_box_section",
+  "login_box_bg",
+  "login_box_position",
+  "col_lbox",
+  "login_box_radius",
+  "login_btn_bg",
+  "col_lbtn",
+  "login_btn_text",
+  "login_content_section",
+  "login_title",
+  "col_lc",
+  "login_subtitle",
+  "workspace_tab",
+  "navbar_section",
+  "navbar_bg",
+  "navbar_text",
+  "col_nb",
+  "navbar_height",
+  "sidebar_section",
+  "sidebar_bg",
+  "sidebar_text",
+  "col_sb",
+  "sidebar_active_bg",
+  "sidebar_active_text",
+  "page_section",
+  "page_bg",
+  "card_bg",
+  "col_pg",
+  "card_border",
+  "workspace_bg_section",
+  "workspace_bg_type",
+  "workspace_bg_color",
+  "workspace_bg_gradient",
+  "workspace_bg_image",
+  "workspace_gradient_builder",
+  "buttons_tab",
+  "btn_primary_section",
+  "btn_primary_bg",
+  "btn_primary_text",
+  "col_bp",
+  "btn_primary_hover",
+  "btn_secondary_section",
+  "btn_secondary_bg",
+  "btn_secondary_text",
+  "inputs_section",
+  "input_bg",
+  "input_border",
+  "col_inp",
+  "input_text",
+  "input_focus_border",
+  "col_inp2",
+  "label_color",
+  "tables_section",
+  "table_head_bg",
+  "table_head_text",
+  "col_tb",
+  "table_row_bg",
+  "table_row_alt_bg",
+  "col_tb2",
+  "table_row_text",
+  "table_border",
+  "notifications_tab",
+  "toast_section",
+  "toast_position",
+  "toast_duration_info",
+  "col_td",
+  "toast_duration_warning",
+  "notification_sound",
+  "toast_info_section",
+  "toast_info_bg",
+  "toast_info_color",
+  "col_ti",
+  "toast_warning_bg",
+  "toast_warning_color",
+  "col_tw",
+  "toast_critical_bg",
+  "toast_critical_color",
+  "footer_tab",
+  "footer_section",
+  "show_footer",
+  "footer_bg",
+  "col_ft",
+  "footer_text",
+  "footer_content",
+  "advanced_tab",
+  "custom_css_section",
+  "custom_css"
+ ],
+ "fields": [
+  {
+   "fieldname": "enable_custom_theme",
+   "fieldtype": "Check",
+   "label": "Enable Custom Theme",
+   "description": "Activate all UI customisations for all users."
+  },
+  {
+   "fieldname": "allow_user_customisation",
+   "fieldtype": "Check",
+   "label": "Allow User Customisation",
+   "description": "Let users personalise their own accent color, font size, workspace background."
+  },
+  {
+   "fieldname": "allow_user_custom_css",
+   "fieldtype": "Check",
+   "label": "Allow User Custom CSS",
+   "description": "Let users write their own personal CSS (use with caution)."
+  },
+  {
+   "fieldname": "theme_tab",
+   "fieldtype": "Tab Break",
+   "label": "Brand & Colors"
+  },
+  {
+   "fieldname": "brand_section",
+   "fieldtype": "Section Break",
+   "label": "Brand"
+  },
+  {
+   "fieldname": "company_logo",
+   "fieldtype": "Attach Image",
+   "label": "Company Logo"
+  },
+  {
+   "fieldname": "logo_width",
+   "fieldtype": "Int",
+   "label": "Logo Width (px)",
+   "default": "120"
+  },
+  {
+   "fieldname": "col_logo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_tagline",
+   "fieldtype": "Data",
+   "label": "Tagline / Slogan",
+   "description": "Shown on login page below logo."
+  },
+  {
+   "fieldname": "colors_section",
+   "fieldtype": "Section Break",
+   "label": "Theme Colors"
+  },
+  {
+   "fieldname": "primary_color",
+   "fieldtype": "Color",
+   "label": "Primary Color"
+  },
+  {
+   "fieldname": "secondary_color",
+   "fieldtype": "Color",
+   "label": "Secondary Color"
+  },
+  {
+   "fieldname": "col_c1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accent_color",
+   "fieldtype": "Color",
+   "label": "Accent Color"
+  },
+  {
+   "fieldname": "text_color",
+   "fieldtype": "Color",
+   "label": "Body Text Color"
+  },
+  {
+   "fieldname": "col_c2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "link_color",
+   "fieldtype": "Color",
+   "label": "Link Color"
+  },
+  {
+   "fieldname": "success_color",
+   "fieldtype": "Color",
+   "label": "Success Color"
+  },
+  {
+   "fieldname": "col_c3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warning_color",
+   "fieldtype": "Color",
+   "label": "Warning Color"
+  },
+  {
+   "fieldname": "danger_color",
+   "fieldtype": "Color",
+   "label": "Danger Color"
+  },
+  {
+   "fieldname": "typography_section",
+   "fieldtype": "Section Break",
+   "label": "Typography"
+  },
+  {
+   "fieldname": "font_family",
+   "fieldtype": "Data",
+   "label": "Font Family",
+   "description": "e.g. 'Inter', 'Roboto', or any Google Font name. Leave blank for default."
+  },
+  {
+   "fieldname": "font_size_base",
+   "fieldtype": "Select",
+   "label": "Base Font Size",
+   "options": "12px\n13px\n14px\n15px\n16px",
+   "default": "14px"
+  },
+  {
+   "fieldname": "col_t1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "font_weight_normal",
+   "fieldtype": "Select",
+   "label": "Normal Weight",
+   "options": "300\n400\n500",
+   "default": "400"
+  },
+  {
+   "fieldname": "font_weight_bold",
+   "fieldtype": "Select",
+   "label": "Bold Weight",
+   "options": "500\n600\n700",
+   "default": "600"
+  },
+  {
+   "fieldname": "col_t2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "border_radius",
+   "fieldtype": "Select",
+   "label": "Border Radius",
+   "options": "0px\n2px\n4px\n6px\n8px\n12px\n16px\n20px",
+   "default": "6px",
+   "description": "Global corner rounding for cards, buttons, inputs."
+  },
+  {
+   "fieldname": "login_tab",
+   "fieldtype": "Tab Break",
+   "label": "Login Page"
+  },
+  {
+   "fieldname": "login_bg_section",
+   "fieldtype": "Section Break",
+   "label": "Login Background"
+  },
+  {
+   "fieldname": "login_bg_type",
+   "fieldtype": "Select",
+   "label": "Background Type",
+   "options": "None\nSolid Color\nGradient\nImage",
+   "default": "None"
+  },
+  {
+   "fieldname": "login_bg_color",
+   "fieldtype": "Color",
+   "label": "Solid Color",
+   "depends_on": "eval:doc.login_bg_type=='Solid Color'"
+  },
+  {
+   "fieldname": "login_bg_gradient",
+   "fieldtype": "Data",
+   "label": "Gradient CSS",
+   "depends_on": "eval:doc.login_bg_type=='Gradient'"
+  },
+  {
+   "fieldname": "login_bg_image",
+   "fieldtype": "Attach Image",
+   "label": "Background Image",
+   "depends_on": "eval:doc.login_bg_type=='Image'"
+  },
+  {
+   "fieldname": "col_lb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "login_bg_blur",
+   "fieldtype": "Int",
+   "label": "Blur (px)",
+   "default": "0",
+   "depends_on": "eval:doc.login_bg_type=='Image'"
+  },
+  {
+   "fieldname": "login_bg_overlay",
+   "fieldtype": "Float",
+   "label": "Dark Overlay (0-1)",
+   "default": "0",
+   "depends_on": "eval:doc.login_bg_type=='Image'"
+  },
+  {
+   "fieldname": "login_gradient_builder",
+   "fieldtype": "HTML",
+   "label": "Gradient Builder",
+   "options": "<div id='login-gradient-builder-target'></div>",
+   "depends_on": "eval:doc.login_bg_type=='Gradient'"
+  },
+  {
+   "fieldname": "login_box_section",
+   "fieldtype": "Section Break",
+   "label": "Login Box"
+  },
+  {
+   "fieldname": "login_box_bg",
+   "fieldtype": "Color",
+   "label": "Box Background"
+  },
+  {
+   "fieldname": "login_box_position",
+   "fieldtype": "Select",
+   "label": "Box Position",
+   "options": "left\ncenter\nright",
+   "default": "center"
+  },
+  {
+   "fieldname": "col_lbox",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "login_box_radius",
+   "fieldtype": "Data",
+   "label": "Box Border Radius",
+   "default": "8px"
+  },
+  {
+   "fieldname": "login_btn_bg",
+   "fieldtype": "Color",
+   "label": "Button Background"
+  },
+  {
+   "fieldname": "col_lbtn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "login_btn_text",
+   "fieldtype": "Color",
+   "label": "Button Text Color"
+  },
+  {
+   "fieldname": "login_content_section",
+   "fieldtype": "Section Break",
+   "label": "Login Page Text"
+  },
+  {
+   "fieldname": "login_title",
+   "fieldtype": "Data",
+   "label": "Page Title",
+   "description": "Replaces default 'Login to Frappe'. Supports company name."
+  },
+  {
+   "fieldname": "col_lc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "login_subtitle",
+   "fieldtype": "Data",
+   "label": "Subtitle",
+   "description": "Shown below the title on login page."
+  },
+  {
+   "fieldname": "workspace_tab",
+   "fieldtype": "Tab Break",
+   "label": "Workspace"
+  },
+  {
+   "fieldname": "navbar_section",
+   "fieldtype": "Section Break",
+   "label": "Navbar"
+  },
+  {
+   "fieldname": "navbar_bg",
+   "fieldtype": "Color",
+   "label": "Background"
+  },
+  {
+   "fieldname": "navbar_text",
+   "fieldtype": "Color",
+   "label": "Text & Icons"
+  },
+  {
+   "fieldname": "col_nb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "navbar_height",
+   "fieldtype": "Select",
+   "label": "Height",
+   "options": "44px\n48px\n56px\n64px",
+   "default": "48px"
+  },
+  {
+   "fieldname": "sidebar_section",
+   "fieldtype": "Section Break",
+   "label": "Sidebar"
+  },
+  {
+   "fieldname": "sidebar_bg",
+   "fieldtype": "Color",
+   "label": "Background"
+  },
+  {
+   "fieldname": "sidebar_text",
+   "fieldtype": "Color",
+   "label": "Text Color"
+  },
+  {
+   "fieldname": "col_sb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sidebar_active_bg",
+   "fieldtype": "Color",
+   "label": "Active Item Background"
+  },
+  {
+   "fieldname": "sidebar_active_text",
+   "fieldtype": "Color",
+   "label": "Active Item Text"
+  },
+  {
+   "fieldname": "page_section",
+   "fieldtype": "Section Break",
+   "label": "Page & Cards"
+  },
+  {
+   "fieldname": "page_bg",
+   "fieldtype": "Color",
+   "label": "Page Background"
+  },
+  {
+   "fieldname": "card_bg",
+   "fieldtype": "Color",
+   "label": "Card Background"
+  },
+  {
+   "fieldname": "col_pg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "card_border",
+   "fieldtype": "Color",
+   "label": "Card Border Color"
+  },
+  {
+   "fieldname": "workspace_bg_section",
+   "fieldtype": "Section Break",
+   "label": "Workspace Background"
+  },
+  {
+   "fieldname": "workspace_bg_type",
+   "fieldtype": "Select",
+   "label": "Background Type",
+   "options": "None\nSolid Color\nGradient\nImage",
+   "default": "None"
+  },
+  {
+   "fieldname": "workspace_bg_color",
+   "fieldtype": "Color",
+   "label": "Solid Color",
+   "depends_on": "eval:doc.workspace_bg_type=='Solid Color'"
+  },
+  {
+   "fieldname": "workspace_bg_gradient",
+   "fieldtype": "Data",
+   "label": "Gradient CSS",
+   "depends_on": "eval:doc.workspace_bg_type=='Gradient'"
+  },
+  {
+   "fieldname": "workspace_bg_image",
+   "fieldtype": "Attach Image",
+   "label": "Background Image",
+   "depends_on": "eval:doc.workspace_bg_type=='Image'"
+  },
+  {
+   "fieldname": "workspace_gradient_builder",
+   "fieldtype": "HTML",
+   "label": "Gradient Builder",
+   "options": "<div id='workspace-gradient-builder-target'></div>",
+   "depends_on": "eval:doc.workspace_bg_type=='Gradient'"
+  },
+  {
+   "fieldname": "buttons_tab",
+   "fieldtype": "Tab Break",
+   "label": "Buttons & Inputs"
+  },
+  {
+   "fieldname": "btn_primary_section",
+   "fieldtype": "Section Break",
+   "label": "Primary Button"
+  },
+  {
+   "fieldname": "btn_primary_bg",
+   "fieldtype": "Color",
+   "label": "Background"
+  },
+  {
+   "fieldname": "btn_primary_text",
+   "fieldtype": "Color",
+   "label": "Text Color"
+  },
+  {
+   "fieldname": "col_bp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "btn_primary_hover",
+   "fieldtype": "Color",
+   "label": "Hover Background"
+  },
+  {
+   "fieldname": "btn_secondary_section",
+   "fieldtype": "Section Break",
+   "label": "Secondary Button"
+  },
+  {
+   "fieldname": "btn_secondary_bg",
+   "fieldtype": "Color",
+   "label": "Background"
+  },
+  {
+   "fieldname": "btn_secondary_text",
+   "fieldtype": "Color",
+   "label": "Text Color"
+  },
+  {
+   "fieldname": "inputs_section",
+   "fieldtype": "Section Break",
+   "label": "Form Inputs"
+  },
+  {
+   "fieldname": "input_bg",
+   "fieldtype": "Color",
+   "label": "Background"
+  },
+  {
+   "fieldname": "input_border",
+   "fieldtype": "Color",
+   "label": "Border Color"
+  },
+  {
+   "fieldname": "col_inp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "input_text",
+   "fieldtype": "Color",
+   "label": "Text Color"
+  },
+  {
+   "fieldname": "input_focus_border",
+   "fieldtype": "Color",
+   "label": "Focus Border"
+  },
+  {
+   "fieldname": "col_inp2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "label_color",
+   "fieldtype": "Color",
+   "label": "Label Color"
+  },
+  {
+   "fieldname": "tables_section",
+   "fieldtype": "Section Break",
+   "label": "Tables & Lists"
+  },
+  {
+   "fieldname": "table_head_bg",
+   "fieldtype": "Color",
+   "label": "Header Background"
+  },
+  {
+   "fieldname": "table_head_text",
+   "fieldtype": "Color",
+   "label": "Header Text"
+  },
+  {
+   "fieldname": "col_tb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "table_row_bg",
+   "fieldtype": "Color",
+   "label": "Row Background"
+  },
+  {
+   "fieldname": "table_row_alt_bg",
+   "fieldtype": "Color",
+   "label": "Alternating Row"
+  },
+  {
+   "fieldname": "col_tb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "table_row_text",
+   "fieldtype": "Color",
+   "label": "Row Text"
+  },
+  {
+   "fieldname": "table_border",
+   "fieldtype": "Color",
+   "label": "Border Color"
+  },
+  {
+   "fieldname": "notifications_tab",
+   "fieldtype": "Tab Break",
+   "label": "Notifications"
+  },
+  {
+   "fieldname": "toast_section",
+   "fieldtype": "Section Break",
+   "label": "Toast Settings"
+  },
+  {
+   "fieldname": "toast_position",
+   "fieldtype": "Select",
+   "label": "Toast Position",
+   "options": "top-right\ntop-center\ntop-left\nbottom-right\nbottom-center",
+   "default": "top-right"
+  },
+  {
+   "fieldname": "toast_duration_info",
+   "fieldtype": "Int",
+   "label": "Info Duration (ms)",
+   "default": "8000"
+  },
+  {
+   "fieldname": "col_td",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "toast_duration_warning",
+   "fieldtype": "Int",
+   "label": "Warning Duration (ms)",
+   "default": "12000"
+  },
+  {
+   "fieldname": "notification_sound",
+   "fieldtype": "Select",
+   "label": "Sound Alert",
+   "options": "\nSoft\nChime\nAlert"
+  },
+  {
+   "fieldname": "toast_info_section",
+   "fieldtype": "Section Break",
+   "label": "Toast Colors"
+  },
+  {
+   "fieldname": "toast_info_bg",
+   "fieldtype": "Color",
+   "label": "Info Background",
+   "default": "#EAF4FE"
+  },
+  {
+   "fieldname": "toast_info_color",
+   "fieldtype": "Color",
+   "label": "Info Accent",
+   "default": "#2490EF"
+  },
+  {
+   "fieldname": "col_ti",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "toast_warning_bg",
+   "fieldtype": "Color",
+   "label": "Warning Background",
+   "default": "#FFF8EC"
+  },
+  {
+   "fieldname": "toast_warning_color",
+   "fieldtype": "Color",
+   "label": "Warning Accent",
+   "default": "#F5A623"
+  },
+  {
+   "fieldname": "col_tw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "toast_critical_bg",
+   "fieldtype": "Color",
+   "label": "Critical Background",
+   "default": "#FEECEC"
+  },
+  {
+   "fieldname": "toast_critical_color",
+   "fieldtype": "Color",
+   "label": "Critical Accent",
+   "default": "#E53935"
+  },
+  {
+   "fieldname": "footer_tab",
+   "fieldtype": "Tab Break",
+   "label": "Footer"
+  },
+  {
+   "fieldname": "footer_section",
+   "fieldtype": "Section Break",
+   "label": "Footer Settings"
+  },
+  {
+   "fieldname": "show_footer",
+   "fieldtype": "Check",
+   "label": "Show Footer"
+  },
+  {
+   "fieldname": "footer_bg",
+   "fieldtype": "Color",
+   "label": "Background",
+   "depends_on": "eval:doc.show_footer"
+  },
+  {
+   "fieldname": "col_ft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "footer_text",
+   "fieldtype": "Color",
+   "label": "Text Color",
+   "depends_on": "eval:doc.show_footer"
+  },
+  {
+   "fieldname": "footer_content",
+   "fieldtype": "Small Text",
+   "label": "Footer Content",
+   "description": "HTML supported. e.g. &copy; 2024 Cyvetech. All rights reserved.",
+   "depends_on": "eval:doc.show_footer"
+  },
+  {
+   "fieldname": "advanced_tab",
+   "fieldtype": "Tab Break",
+   "label": "Advanced"
+  },
+  {
+   "fieldname": "custom_css_section",
+   "fieldtype": "Section Break",
+   "label": "Custom CSS",
+   "description": "Applied globally after all theme variables. Use for fine-tuning."
+  },
+  {
+   "fieldname": "custom_css",
+   "fieldtype": "Code",
+   "label": "Custom CSS",
+   "options": "CSS"
+  }
+ ],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  }
+ ]
+}

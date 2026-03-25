@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "issingle": 0,
+ "module": "Frappe UI Enhancer",
+ "name": "Notification Log",
+ "title_field": "title",
+ "sort_field": "delivered_at",
+ "sort_order": "DESC",
+ "track_changes": 0,
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "links": [],
+ "field_order": [
+  "rule",
+  "for_user",
+  "title",
+  "message",
+  "priority",
+  "link_doctype",
+  "link_name",
+  "is_read",
+  "read_at",
+  "delivered_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule",
+   "fieldtype": "Link",
+   "label": "Notification Rule",
+   "options": "Notification Rule",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "for_user",
+   "fieldtype": "Link",
+   "label": "For User",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "label": "Message"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Info\nWarning\nCritical",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "link_doctype",
+   "fieldtype": "Link",
+   "label": "Linked DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "link_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Linked Document",
+   "options": "link_doctype"
+  },
+  {
+   "fieldname": "is_read",
+   "fieldtype": "Check",
+   "label": "Read",
+   "default": "0",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "read_at",
+   "fieldtype": "Datetime",
+   "label": "Read At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivered_at",
+   "fieldtype": "Datetime",
+   "label": "Delivered At",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "export": 1,
+   "report": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "if_owner": 1,
+   "read": 1,
+   "role": "All",
+   "write": 0
+  }
+ ]
+}
